@@ -1,0 +1,11 @@
+nav > ul > li{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav > ul > li > .aa{
+    text-decoration: none;
+    color: #eee;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
