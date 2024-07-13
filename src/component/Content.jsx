@@ -23,49 +23,44 @@ const Content = () => {
                   <p className='mee'>Web Developer</p>
                   <div className="me">
                     <p>
-                      My Name is Emeka Bruno, I am a Web Developer who specializes in UI/UX Design, Web Design and Web devlopment.I have learnt FrontEnd Skills and libaries like HTML5, CSS3, Bootstrap, JavaScript, JQuery React, Redux, Backend Skills and Framework like Nodejs and Express. I also know Authentication and Database(Firebase for Authentication and Realtime Database).
+                      My Name is Emeka Bruno, I am a Web Developer who specializes inWeb Design and Web devlopment.I have learnt FrontEnd Skills and libaries like HTML5, CSS3, Bootstrap, Taiwind, JavaScript, JQuery React, Redux, Backend Skills and Framework like Nodejs and Express. I also know how to use and Implement features like Authentication and Database(Firebase for Authentication and Realtime Database).
                     </p>
                   </div>
               </div>
-              <div className='flex flex-row items-center'>
-                <CircularChart percentage={82}/>
-                <h3 className='ml-3'>Frontend Development</h3>
-              </div>
-              <div className='flex flex-row items-center'>
-                <CircularChart percentage={55}/>
-                <h3 className='ml-3'>Backend Development</h3>
-              </div>
-              <div className='flex flex-row items-center'>
-                <CircularChart percentage={60}/>
-                <h3 className='ml-3'>Database</h3>
-              </div>
+                <CircularChart percentage={82} value={'Frontend Development'}/>
+                <CircularChart percentage={55} value={'Backend Development'}/>
+                <CircularChart percentage={60} value={'Database'}/>
           </div>
       </div>
       <div className="container skills py-4 select-none" data-aos='zoom-in' data-aos-duration='2000'>
         <h2 className='flex flex-row justify-between items-center md:w-1/4'>Skill Chart <ChartBar weight='fill' size={30}/></h2>
           <div className="progress">
               <div className="pro-value1">
-                <p className="px-3">HTML \ CSS <span className="text-black float-right">90%</span></p>
+                <p className="px-3">HTML\CSS <span className="text-black float-right">90%</span></p>
               </div>
           </div>
           <div className="progress my-4">
               <div className="pro-value2">
-                <p className="px-3">Bootstrap<span className="text-black float-right">65%</span></p>
+                <p className="px-3">Bootstrap\Tailwind<span className="text-black float-right">85%</span></p>
               </div>
             </div>
             <div className="progress">
               <div className="pro-value3">
-                <p className="px-3">JavaScript \ JQuery <span className="text-black float-right">80%</span></p>
+                <p className="px-3">JavaScript\JQuery <span className="text-black float-right">80%</span></p>
               </div>
             </div>
             <div className="progress my-4">
               <div className="pro-value4">
-                <p className="px-3">React <span className="text-black float-right">70%</span></p>
+                <p className="px-3">React <span className="text-black float-right">75%</span></p>
               </div>
             </div>
             <div className="progress my-4">
               <div className="pro-value5">
-                <p className="px-3">Nodejs \ Express.js <span className="text-black float-right">55%</span></p>
+                <p className="px-3">
+                  <span className='hidden lg:block'>Nodejs \ Express.js</span>
+                  <span className='lg:hidden'>Nod\Exp</span>
+                  <span className="text-black float-right">55%</span>
+                </p>
               </div>
             </div>
             <div className="progress my-4">

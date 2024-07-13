@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './comptStyle/CircularChart.css'
 
-export default function CircularChart({ percentage }) {
+export default function CircularChart({ percentage, value }) {
     const [currentPercentage, setCurrentPercentage] = useState(0)
     useEffect(()=>{
         if(currentPercentage < percentage){
@@ -13,7 +13,8 @@ export default function CircularChart({ percentage }) {
         }
     }, [currentPercentage, percentage])
   return (
-    <div className='circular-chart'>
+    <div className='chart flex items-center gap-3'>
+        <div className='circular-chart'>
         <div className="circle" style={{
             background: `conic-gradient(#4caf50 ${currentPercentage}, #ddd 0deg)`
         }}>
@@ -21,6 +22,8 @@ export default function CircularChart({ percentage }) {
                 {percentage}%
             </span>
         </div>
+        </div>
+        <h3>{value}</h3>
     </div>
   )
 }

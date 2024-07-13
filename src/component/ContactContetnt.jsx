@@ -51,20 +51,24 @@ export default function ContactContent() {
             <div className="container contactInfo mt-4 p-3">
                 <div className="row logo">
                     <div className="col-lg-3 log phone">
-                        <PhoneCall size={60} weight='fill'/>
+                        <a className='aref' href="tel:+2347065824973" target='_blank'><PhoneCall size={60} weight='fill' color='#eee'/>
                         <p>+2347065824973</p>
+                        </a>
                     </div>
                     <div className="col-lg-3 log email">
-                        <Envelope size={60} weight='fill'/>
+                    <a className='aref' href="mailto:brunoemeka06@gmail.com" target='_blank'><Envelope size={60} weight='fill' color='#eee'/>
                         <p>brunoemeka06@gmail.com</p>
+                    </a>
                     </div>
                     <div className="col-lg-3 log whats">
-                        <WhatsappLogo size={60} weight='fill' color='#068d3a'/>
+                        <a className='aref' href="https://wa.me/07065824973" target='_blank'><WhatsappLogo size={60} weight='fill' color='#068d3a'/>
                         <p>+2347065824973</p>
+                        </a>
                     </div>
                     <div className="col-lg-3 log face">
-                        <FacebookLogo size={60} weight='fill' color='#0066ff'/>
+                    <a className='aref' href="https://www.facebook.com/KarlXaviver" target='_blank'><FacebookLogo size={60} weight='fill' color='#0066ff'/>
                         <p>Emmy Bruno</p>
+                    </a>
                     </div>
                 </div>
                 <div className="message">

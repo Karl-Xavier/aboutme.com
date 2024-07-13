@@ -17,6 +17,15 @@
     cursor: pointer;
 }
 
+.logo>.log>.aref{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+}
+
 .message{
     width: 100%;
     display: flex;
@@ -80,6 +89,10 @@
 .butt:hover{
     background-color: #d5d5d5;
     transition: .6s linear;
+}
+
+.aref{
+    text-decoration: none;
 }
 
 @media screen and (max-width: 480px) {

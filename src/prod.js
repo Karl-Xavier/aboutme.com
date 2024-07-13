@@ -6,6 +6,8 @@ import aigene from './assets/aigene.png'
 import chat from './assets/chat.png'
 import bloggres from './assets/2024-05-27.png'
 import shop from './assets/2024-05-19.png'
+import ageClac from './assets/ageClac.png'
+import pcci from './assets/pcci.png'
 
 export const PROD = [
     {
@@ -69,5 +71,20 @@ export const PROD = [
         cover: shop,
         tag: ['React', 'Context API'],
         link: 'https://shop-website-pied.vercel.app/'
+    },
+    {
+        id: 10,
+        title: 'Age Calculator',
+        description: 'Made Using Web Development basics',
+        cover: ageClac,
+        tag: ['Basics', 'Frontend Mentor', 'HTML', 'CSS', 'JavaScript'],
+        link: ''
+    },
+    {
+        id: 11,
+        title: 'Banking Platform',
+        description: 'Made Using Firebase, Nodejs and React',
+        cover: pcci,
+        tag: ['React', 'Firebase', 'Node', 'Express', 'Banking'],
     }
 ]
