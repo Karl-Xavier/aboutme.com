@@ -7,12 +7,17 @@ import CircularChart from './CircularChart'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-const Content = () => {
+const Content = ({ setIsOpen }) => {
   useEffect(() => {
     AOS.init()
   }, [])
+
+  function changeIsOpen(){
+    setIsOpen(false)
+  }
+
   return (
-    <div className='container'>
+    <div className='container' onClick={changeIsOpen}>
       <div className='row'>
           <div className="col-lg-5" data-aos='zoom-in' data-aos-duration='2000'>
               <img className='img-fluid rounded pic' src={Emeka}/>

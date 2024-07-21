@@ -4,7 +4,7 @@ import './comptStyle/ContactContent.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Envelope, FacebookLogo, PaperPlaneTilt, PhoneCall, WhatsappLogo } from 'phosphor-react';
 
-export default function ContactContent() {
+export default function ContactContent({ setIsOpen }) {
     const form = useRef();
     const [formData, setFormData] = useState({
         user_name: '',
@@ -43,10 +43,14 @@ export default function ContactContent() {
             alert('Something went wrong');
             console.log('Error:', err);
         });
-    };
+    }
+
+    function changeIsOpen(){
+        setIsOpen(false)
+    }
 
     return (
-        <div className='container'>
+        <div className='container' onClick={changeIsOpen}>
             <h2>Contact Me on</h2>
             <div className="container contactInfo mt-4 p-3">
                 <div className="row logo">

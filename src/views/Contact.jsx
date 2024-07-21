@@ -2,10 +2,12 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import ContactContetnt from '../component/ContactContetnt'
 
-const Contact = () => {
+const Contact = ({ setIsOpen }) => {
   return (
     <div className='container w-full'>
-      <ContactContetnt/>
+      <ContactContetnt
+        setIsOpen={setIsOpen}
+      />
     </div>
   )
 }

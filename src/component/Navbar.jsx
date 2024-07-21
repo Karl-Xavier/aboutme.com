@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './comptStyle/Navbar.css'
 import SideNav from './SideNav'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({ isOpen, toggleDrawer, setIsOpen }) => {
+
   return (
     <nav>
         <ul className='hidden md:hidden lg:block'>
@@ -18,7 +19,11 @@ const Navbar = () => {
             </li>
         </ul>
         <div className="lg:hidden">
-            <SideNav/>
+            <SideNav
+                isOpen={isOpen}
+                showSideNav={toggleDrawer}
+                setIsOpen={setIsOpen}
+            />
         </div>
     </nav>
   )

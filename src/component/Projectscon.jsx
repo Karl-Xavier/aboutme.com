@@ -7,13 +7,17 @@ import { X } from 'phosphor-react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-export default function Projectscon() {
+export default function Projectscon({ setIsOpen }) {
   useEffect(() => {
     AOS.init()
   }, [])
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedImage, setSelectedImage] = useState(null)
   const [selectedImageTitle, setSelectedImageTitle] = useState('')
+
+  const changeIsOpen = () => {
+    setIsOpen(false)
+  }
 
    const handleOpen=(cover, title)=>{
     setIsModalOpen(true)
@@ -30,7 +34,7 @@ export default function Projectscon() {
    }
 
   return (
-    <div className='container h-full'>
+    <div className='container h-full' onClick={changeIsOpen}>
         <h3>My Projects .</h3>
         <div className="row">
           {PROD.map((pro) => {
