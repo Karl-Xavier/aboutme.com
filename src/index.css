@@ -6,3 +6,8 @@
     background: linear-gradient(#161414, #000000);
     color: #eee;
 }
+
+.aaa{
+    background: linear-gradient(#eee, #d5d5d5);
+    color: #161414;
+}

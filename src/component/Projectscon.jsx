@@ -7,7 +7,7 @@ import { X } from 'phosphor-react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-export default function Projectscon({ setIsOpen }) {
+export default function Projectscon({ setIsOpen, lightMode }) {
   useEffect(() => {
     AOS.init()
   }, [])
@@ -43,7 +43,7 @@ export default function Projectscon({ setIsOpen }) {
                 <img src={pro.cover} className='img-fluid rounded pro' alt={pro.id} onClick={()=>handleOpen(pro.cover, pro.title)} lazy/>
                 <div className="tags mt-2">
                   {pro.tag.map((tags, index) => {
-                    return <li key={index}>{tags}</li>
+                    return <li style={!lightMode ? styles.darkModeTag : styles.lightModeTag} key={index}>{tags}</li>
                   })}
                 </div>
                 <div className="explanation mt-2">
@@ -81,4 +81,15 @@ export default function Projectscon({ setIsOpen }) {
         )}
     </div>
   )
+}
+
+const styles = {
+  darkModeTag: {
+    background: 'linear-gradient(#eee, #ddd)',
+    color: '#000'
+  },
+  lightModeTag: {
+    background: 'linear-gradient(#161414, #000000)',
+    color: '#eee'
+  }
 }

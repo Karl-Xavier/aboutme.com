@@ -8,6 +8,7 @@ import bloggres from './assets/2024-05-27.png'
 import shop from './assets/2024-05-19.png'
 import ageClac from './assets/ageClac.png'
 import pcci from './assets/pcci.png'
+import node from './assets/node.png'
 
 export const PROD = [
     {
@@ -86,5 +87,12 @@ export const PROD = [
         description: 'Made Using Firebase, Nodejs and React',
         cover: pcci,
         tag: ['React', 'Firebase', 'Node', 'Express', 'Banking'],
+    },
+    {
+        id: 12,
+        title: 'Shop Website',
+        description: 'Made Using Nodejs, HTML, CSS, Local Storage to store items and JavaScript',
+        cover: node,
+        tag: ['HTML', 'Node', 'Express', 'Local Storage', 'CSS', 'JavaScript'],
     }
 ]

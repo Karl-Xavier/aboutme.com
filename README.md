@@ -109,3 +109,4 @@ project
 link
 <Link size={32} />
 
+<a href='' download='filename'>My Cv</a>

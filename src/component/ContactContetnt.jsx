@@ -4,7 +4,7 @@ import './comptStyle/ContactContent.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Envelope, FacebookLogo, PaperPlaneTilt, PhoneCall, WhatsappLogo } from 'phosphor-react';
 
-export default function ContactContent({ setIsOpen }) {
+export default function ContactContent({ setIsOpen, lightMode }) {
     const form = useRef();
     const [formData, setFormData] = useState({
         user_name: '',
@@ -55,22 +55,22 @@ export default function ContactContent({ setIsOpen }) {
             <div className="container contactInfo mt-4 p-3">
                 <div className="row logo">
                     <div className="col-lg-3 log phone">
-                        <a className='aref' href="tel:+2347065824973" target='_blank'><PhoneCall size={60} weight='fill' color='#eee'/>
+                        <a  style={!lightMode ? styles.darkCol : styles.LightCol}className='aref' href="tel:+2347065824973" target='_blank'><PhoneCall size={60} weight='fill' color={lightMode ? '161414' : '#eee'}/>
                         <p>+2347065824973</p>
                         </a>
                     </div>
                     <div className="col-lg-3 log email">
-                    <a className='aref' href="mailto:brunoemeka06@gmail.com" target='_blank'><Envelope size={60} weight='fill' color='#eee'/>
+                    <a style={!lightMode ? styles.darkCol : styles.LightCol} className='aref' href="mailto:brunoemeka06@gmail.com" target='_blank'><Envelope size={60} weight='fill' color={lightMode ? '161414' : '#eee'}/>
                         <p>brunoemeka06@gmail.com</p>
                     </a>
                     </div>
                     <div className="col-lg-3 log whats">
-                        <a className='aref' href="https://wa.me/07065824973" target='_blank'><WhatsappLogo size={60} weight='fill' color='#068d3a'/>
+                        <a style={!lightMode ? styles.darkCol : styles.LightCol} className='aref' href="https://wa.me/07065824973" target='_blank'><WhatsappLogo size={60} weight='fill' color='#068d3a'/>
                         <p>+2347065824973</p>
                         </a>
                     </div>
                     <div className="col-lg-3 log face">
-                    <a className='aref' href="https://www.facebook.com/KarlXaviver" target='_blank'><FacebookLogo size={60} weight='fill' color='#0066ff'/>
+                    <a style={!lightMode ? styles.darkCol : styles.LightCol} className='aref' href="https://www.facebook.com/KarlXaviver" target='_blank'><FacebookLogo size={60} weight='fill' color='#0066ff'/>
                         <p>Emmy Bruno</p>
                     </a>
                     </div>
@@ -109,4 +109,13 @@ export default function ContactContent({ setIsOpen }) {
             </div>
         </div>
     );
+}
+
+const styles = {
+    darkCol: {
+        color: '#eee'
+    },
+    LightCol: {
+        color: '#161414'
+    }
 }

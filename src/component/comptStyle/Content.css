@@ -1,7 +1,26 @@
 .mee{
     font-weight: 500;
-    color: lightgray;
     font-style: oblique;
+}
+
+.cv{
+    width: 75%;
+    margin: 10px auto 10px auto;
+
+    a{
+        font-weight: 700;
+        text-shadow: 2px 2px 4px grey;
+
+        button{
+            width: 100%;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+    }
 }
 
 .progress

@@ -5,8 +5,3 @@ header{
     align-items: center;
     padding: 10px;
 }
-
-header > .alink{
-    text-decoration: none;
-    color: #eee;
-}
