@@ -5,9 +5,11 @@
 .eee{
     background: linear-gradient(#161414, #000000);
     color: #eee;
+    min-height: 100vh;
 }
 
 .aaa{
     background: linear-gradient(#eee, #d5d5d5);
     color: #161414;
+    min-height: 100vh;
 }

@@ -2,13 +2,10 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import Content from '../component/Content'
 
-const Home = ({ setIsOpen, lightMode }) => {
+const Home = () => {
   return (
-    <div className='container h-full'>
-        <Content
-          setIsOpen={setIsOpen}
-          lightMode={lightMode}
-        />
+    <div className='container h-auto'>
+        <Content/>
     </div>
   )
 }

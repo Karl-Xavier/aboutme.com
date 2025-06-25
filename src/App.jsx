@@ -5,47 +5,26 @@ import Home from "./views/Home";
 import Projects from "./views/Projects";
 import Contact from "./views/Contact";
 import Error from "./views/Error";
+import { useNavContext } from "./component/ContextAPI";
+import ProjId from "./views/ProjId";
 
 function App() {
 
-  const [isOpen, setIsOpen] = useState(false)
-  const [lightMode, setLightMode] = useState(false)
-
-  function toggleBackground(){
-    setLightMode(!lightMode)
-}
-
-  function toggleDrawer(){
-    setIsOpen(!isOpen)
-  }
+  const { lightMode } = useNavContext()
 
   return (
     <Router>
       <main className={`App h-full ${lightMode ? 'aaa' : 'eee'}`}>
-      <Header
-        isOpen={isOpen}
-        toggleDrawer={toggleDrawer}
-        setIsOpen={setIsOpen}
-        lightMode={lightMode}
-        toggleBackground={toggleBackground}
-      />
+      <Header/>
         <Routes>
-          <Route path="/" element={<Home
-            setIsOpen={setIsOpen}
-            lightMode={lightMode}
-          />}/>
-          <Route path="/projects" element={<Projects
-            setIsOpen={setIsOpen}
-            lightMode={lightMode}
-          />}/>
-          <Route path="/contact" element={<Contact
-            setIsOpen={setIsOpen}
-            lightMode={lightMode}
-          />}/>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/projects" element={<Projects/>}/>
+          <Route path='/projects/:id' element={<ProjId/>}/>
+          <Route path="/contact" element={<Contact/>}/>
           <Route path='*' element={<Error/>}/>
         </Routes>    
       </main>
-    </Router>
+  </Router>
   );
 }
 

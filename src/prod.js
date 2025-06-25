@@ -1,98 +1,32 @@
-import animated_store from './assets/SHOPIFY4.png'
-import react_website from './assets/soloweb.png'
-import axios_webapp from './assets/2024-05-271.png'
-import travel from './assets/travel-journal.png'
-import aigene from './assets/aigene.png'
-import chat from './assets/chat.png'
-import bloggres from './assets/2024-05-27.png'
-import shop from './assets/2024-05-19.png'
-import ageClac from './assets/ageClac.png'
-import pcci from './assets/pcci.png'
-import node from './assets/node.png'
+import shonenstream from './assets/shonenstream2.png'
+import shonenstream2 from './assets/shonenstream1.png'
+import shonenstream3 from './assets/shonenstream-auth-context.png'
+import shonenstream4 from './assets/shonenstream-form-validation.png'
+import shonenstream5 from './assets/shonenstream-redis-cache.png'
 
-export const PROD = [
+// Logos Import
+import nextLogo from './assets/nextjs-logo.png'
+import redisLogo from './assets/redis-logo.png'
+import nodeLogo from './assets/nodejs-logo.png'
+import mongoLogo from './assets/mongo-logo.png'
+import expressLogo from './assets/express-logo.png'
+import typeLogo from './assets/typescript.png'
+import { GithubLogo, Link } from 'phosphor-react'
+
+export const projects = [
     {
         id: 1,
-        title: 'Store',
-        description: 'A Website built using HTML, CSS, jQuery and JavaScript',
-        cover: animated_store,
-        tag: ['HTML', 'CSS', 'jQuery', 'JavaScript'],
-        link: 'https://karl-xavier.github.io/animated.github.io/'
+        title: 'Shonenstream',
+        description: `<p><strong>Shonenstream</strong> is a modern anime streaming platform built to provide a smooth ad-free experience for discovering, watching and interacting with anime content. The frontend is developed using <span className='logo'>NextJs <img src='${nextLogo}'' alt="next-logo" width='30' height='30'/></span> for SEO optimization, speed and responsiveness, while the backend is split into two.<<br/><ol>
+            <li><strong>Authentication Server</strong> - The server handles user login, signup, email verification, password reset, comments, book mark and profile management using JWT for authentication, <span className='logo'>Redis <img src='${redisLogo}' alt='redis-logo' width='30' height='30'/></span> for Caching user profile data and <span className='logo'>MongoDb <img src='${mongoLogo}' alt='mongo-logo' width='40' height='40'/></span> for persistent user data.</li>
+            <li><strong>Scraper Server</strong> - Crawls anime information from different sources and provides images, titles, description and streaming links.</li>
+        </ol><br/>Users can search for anime, stream episodes directly in browser with a custom video player, bookmark favorite anime and leave comments. The platform supports mobile device.<br/>This setup separates concerns, ensures better scalability, and give a fast experience to anime fans around the world.<p>`,
+        cover: shonenstream,
+        tag: [nextLogo, typeLogo, nodeLogo, expressLogo,redisLogo, mongoLogo],
+        link: [
+            { name: 'Github', link: 'https://github.com/Karl-Xavier/Shonenstream-Remake.git', icon: <GithubLogo size={22} weight='fill'/> },
+            { name: 'Live Link', link: 'https://myanimetv.vercel.app', icon: <Link size={22} weight='bold'/>, }
+        ],
+        otherImages: [shonenstream2, shonenstream3, shonenstream4, shonenstream5]
     },
-    {
-        id: 2,
-        title: 'React Website',
-        description: 'A Website made using React',
-        cover: react_website,
-        tag: ['React']
-    },
-    {
-        id: 3,
-        title: 'Food Finder',
-        description: 'React WebApp Made using Axios for API calls',
-        cover: axios_webapp,
-        tag: ['React', 'API'],
-        link: 'https://food-finder-fawn.vercel.app/'
-    },
-    {
-        id: 5,
-        title: 'Blog Website',
-        description: 'A Blog Website About my development Joruney',
-        cover: bloggres,
-        tag: ['React'],
-        link: 'https://blogapp-delta-beige.vercel.app/'
-    },
-    {
-        id: 6,
-        title: 'Travel Journal',
-        description: 'Travel Journal made using React and firebase',
-        cover: travel,
-        tag: ['React', 'Firebase'],
-        link: 'https://travel-journal-5528e.web.app/'
-    },
-    {
-        id: 7,
-        title: 'Chat App',
-        description: 'ChatApp made using React, firebase and some frontend libraries',
-        cover: chat,
-        tag: ['React', 'Firebase', 'Tailwind', 'Bootstrap' , 'MaterialUI'],
-        link: 'https://chat-317a8.web.app'
-    },
-    {
-        id: 8,
-        title: 'Ai image Generator',
-        description: 'Made using React',
-        cover: aigene,
-        tag: ['React', 'OpenAi API']
-    },
-    {
-        id: 9,
-        title: 'Improved Shop using React',
-        description: 'Made Using React and React functions',
-        cover: shop,
-        tag: ['React', 'Context API'],
-        link: 'https://shop-website-pied.vercel.app/'
-    },
-    {
-        id: 10,
-        title: 'Age Calculator',
-        description: 'Made Using Web Development basics',
-        cover: ageClac,
-        tag: ['Basics', 'Frontend Mentor', 'HTML', 'CSS', 'JavaScript'],
-        link: ''
-    },
-    {
-        id: 11,
-        title: 'Banking Platform',
-        description: 'Made Using Firebase, Nodejs and React',
-        cover: pcci,
-        tag: ['React', 'Firebase', 'Node', 'Express', 'Banking'],
-    },
-    {
-        id: 12,
-        title: 'Shop Website',
-        description: 'Made Using Nodejs, HTML, CSS, Local Storage to store items and JavaScript',
-        cover: node,
-        tag: ['HTML', 'Node', 'Express', 'Local Storage', 'CSS', 'JavaScript'],
-    }
 ]

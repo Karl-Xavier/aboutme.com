@@ -2,35 +2,17 @@ import React, { useEffect, useState } from 'react'
 import './comptStyle/Content.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import Emeka from '../assets/88774833fhn_034822.png'
-import { ChartBar } from 'phosphor-react'
-import CircularChart from './CircularChart'
 import responsive from '../assets/responsive.png'
 import algorithm from '../assets/algorithm.png'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { useNavContext } from './ContextAPI'
+import SkillChart from './SkillChart'
+import { GraduationCap } from 'phosphor-react'
 
-const Content = ({ setIsOpen, lightMode }) => {
+const Content = () => {
 
-  function getStyles(){
-    const screenWidth = window.innerWidth
-    const breakPoint = 1000
-    if(screenWidth < breakPoint){
-      return styles.smallScreen
-    }
-    return styles.largeScreen
-  }
-
-  useEffect(()=>{
-    function handleSize(){
-      setCurrentStyle(getStyles())
-    }
-    window.addEventListener('resize', handleSize)
-    return () => {
-      window.removeEventListener('resize', handleSize)
-    }
-  }, [])
-
-  const [currentStyle, setCurrentStyle] = useState(getStyles())
+  const { setIsOpen, lightMode } = useNavContext()
 
   useEffect(() => {
     AOS.init()
@@ -41,31 +23,29 @@ const Content = ({ setIsOpen, lightMode }) => {
   }
 
   return (
-    <div className='container' onClick={changeIsOpen}>
+    <div className='container h-auto' onClick={changeIsOpen}>
       <div className='row'>
           <div className="col-lg-5" data-aos='zoom-in' data-aos-duration='2000'>
               <img className='img-fluid rounded pic' src={Emeka}/>
           </div>
           <div className="col-lg-7" data-aos='zoom-in' data-aos-duration='2000'>
               <div className='about'>
-                  <h2>About Me.</h2>
-                  <p style={!lightMode ? styles.darkJob : styles.lightJob} className='mee'>Web Developer</p>
+                  <h2 className='text-[18px] mt-2 lg:mt-0'>ABOUTME.</h2>
+                  <p style={!lightMode ? styles.darkJob : styles.lightJob} className='mee text-[16px]'>FULLSTACK DEVELOPER</p>
                   <div className="me">
                     <p>
-                      My Name is Emeka Bruno, I am a Web Developer who specializes in Web Design and Web devlopment.I have learnt FrontEnd Skills and libraries like HTML5, CSS3, Bootstrap, TailwindCSS, JavaScript, JQuery, React, Redux, Backend Skills and Framework like Nodejs and Express. I also know how to use and Implement features like Authentication and Database(Firebase for Authentication and Realtime Database).
+                      My Name is Nnaemeka Uwasomba Joshua, I am a Fullstack MERN developer who specializes in building scalable fullstack applications. I have hands on experience using technologies like React and NextJs to build scalable frontend applications. I use Tailwind CSS as a css library for quick stylings. I also build backend servers and make API routes using NodeJS, Express and Typescript for type safety. I Utilize Redis for caching data for faster load time and MongoDB as database to store data. I have worked on Many Project but i choose to show my best Projects.
                     </p>
                     <div className="cv">
                     <a style={!lightMode ? styles.darkLink : styles.lightLink} href={`${process.env.PUBLIC_URL}/EmekaResume.pdf`} download='EmekaResume.pdf'><button style={!lightMode ? styles.darkButton : styles.lightButton}>Download CV</button></a>
                     </div>
                   </div>
+                  <SkillChart/>
               </div>
-                <CircularChart percentage={82} value={'Frontend Development'}/>
-                <CircularChart percentage={55} value={'Backend Development'}/>
-                <CircularChart percentage={60} value={'Database'}/>
           </div>
       </div>
       <div className="certifications my-4">
-        <h2 className='my-2'>Certificates</h2>
+        <h2 className='my-4 text-[16px] flex flex-row justify-start items-center gap-2'>Certificates <GraduationCap weight='fill' size={22}/></h2>
         <div className="row">
           <div className="col-lg-6">
           <img src={responsive} alt="Certificates" />
@@ -75,48 +55,7 @@ const Content = ({ setIsOpen, lightMode }) => {
           </div>
         </div>
       </div>
-      <div className="container skills py-4 select-none" data-aos='zoom-in' data-aos-duration='2000'>
-        <h2 className='flex flex-row justify-between items-center md:w-1/4'>Skill Chart <ChartBar weight='fill' size={30}/></h2>
-          <div className="progress">
-              <div className="pro-value1">
-                <p className="px-3">HTML\CSS <span className="text-black float-right">90%</span></p>
-              </div>
-          </div>
-          <div className="progress my-4">
-              <div className="pro-value2">
-                <p className="px-3">Bootstrap\Tailwind<span className="text-black float-right">85%</span></p>
-              </div>
-            </div>
-            <div className="progress">
-              <div className="pro-value3">
-                <p className="px-3">JavaScript\JQuery <span className="text-black float-right">80%</span></p>
-              </div>
-            </div>
-            <div className="progress my-4">
-              <div className="pro-value4">
-                <p className="px-3">React <span className="text-black float-right">75%</span></p>
-              </div>
-            </div>
-            <div className="progress my-4">
-              <div className="pro-value5">
-                <p className="px-3">
-                  <div style={currentStyle}>
-                    <span>Nodejs\Express.js</span>
-                    <span className="text-black float-right">55%</span>
-                  </div>
-                  <div className='lg:hidden'>
-                    <span>Nod\Exp</span>
-                    <span className="text-black float-right">55%</span>
-                  </div>
-                </p>
-              </div>
-            </div>
-            <div className="progress my-4">
-              <div className="pro-value6">
-                <p className="px-3">Firebase <span className="text-black float-right">60%</span></p>
-              </div>
-            </div>
-      </div>
+     
     </div>
   )
 }

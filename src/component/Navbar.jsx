@@ -3,12 +3,15 @@ import './comptStyle/Navbar.css'
 import SideNav from './SideNav'
 import { Link } from 'react-router-dom'
 import Toggle from './Toggle'
+import { useNavContext } from './ContextAPI'
 
-const Navbar = ({ isOpen, toggleDrawer, setIsOpen, lightMode, toggleBackground }) => {
+const Navbar = () => {
+
+    const { lightMode } = useNavContext()
 
   return (
-    <nav>
-        <ul className='hidden md:hidden lg:block'>
+    <nav >
+        <ul className='hidden md:hidden lg:block m-0'>
             <li>
                 <Link style={!lightMode ? styles.darkLink : styles.lightLink} className='aa' to='/'>Home</Link>
             </li>
@@ -19,17 +22,9 @@ const Navbar = ({ isOpen, toggleDrawer, setIsOpen, lightMode, toggleBackground }
             <Link style={!lightMode ? styles.darkLink : styles.lightLink} className='aa' to='/contact'>ContactMe</Link>
             </li>
         </ul>
-        <Toggle
-            lightMode={lightMode}
-            toggleBackground={toggleBackground}
-        />
+        <Toggle/>
         <div className="lg:hidden">
-            <SideNav
-                isOpen={isOpen}
-                showSideNav={toggleDrawer}
-                setIsOpen={setIsOpen}
-                lightMode={lightMode}
-            />
+            <SideNav/>
         </div>
     </nav>
   )

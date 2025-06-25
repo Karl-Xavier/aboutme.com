@@ -1,14 +1,15 @@
 import { Moon, Sun } from 'phosphor-react'
 import React from 'react'
+import { useNavContext } from './ContextAPI'
 
-export default function({ lightMode, toggleBackground }) {
+export default function() {
+
+    const { lightMode, toggleBackground } = useNavContext()
 
 return (
-    <div>
         <button style={!lightMode ? styles.moonsun : styles.lightmode} onClick={toggleBackground}>
             {lightMode ? <Moon size={20} weight='fill'/> : <Sun size={20} weight='fill'/>}
         </button>
-    </div>
   )
 }
 

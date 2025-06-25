@@ -2,8 +2,11 @@ import React, { useState } from 'react'
 import { House, List, ProjectorScreen, User, X } from 'phosphor-react'
 import { Link } from 'react-router-dom'
 import './comptStyle/SideNav.css'
+import { useNavContext } from './ContextAPI'
 
-const SideNav = ({ isOpen, showSideNav, setIsOpen, lightMode }) => {
+const SideNav = () => {
+
+  const { isOpen, toggleDrawer, setIsOpen, lightMode } = useNavContext()
 
   function onClearNav(){
     setIsOpen(false)
@@ -11,7 +14,7 @@ const SideNav = ({ isOpen, showSideNav, setIsOpen, lightMode }) => {
 
   return (
     <div>
-        <button className='toggle' onClick={showSideNav}>
+        <button className='toggle' onClick={toggleDrawer}>
             {!isOpen ? <List size={32} /> : <X size={32}/>}
         </button>
         <div style={!lightMode ? styles.darkMode : styles.lightMode} className={`sidenav ${isOpen && 'open'}`}>

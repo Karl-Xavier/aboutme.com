@@ -1,0 +1,28 @@
+.description p span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.description ol{
+  list-style-type: style;
+  padding: 0;
+}
+
+.description ol span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Carousel Styles */
+
+.carousel-container img{
+  object-fit: cover;
+}
+
+.carousel-container button{
+  top: 50%;
+}

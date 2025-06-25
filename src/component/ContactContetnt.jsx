@@ -3,8 +3,12 @@ import emailjs from 'emailjs-com';
 import './comptStyle/ContactContent.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Envelope, FacebookLogo, PaperPlaneTilt, PhoneCall, WhatsappLogo } from 'phosphor-react';
+import { useNavContext } from './ContextAPI';
 
-export default function ContactContent({ setIsOpen, lightMode }) {
+export default function ContactContent() {
+
+    const { setIsOpen, lightMode } = useNavContext()
+
     const form = useRef();
     const [formData, setFormData] = useState({
         user_name: '',

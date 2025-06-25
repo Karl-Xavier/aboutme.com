@@ -23,6 +23,10 @@
     }
 }
 
+.skills h2{
+    text-transform: uppercase;
+}
+
 .progress
 {
     background-color: rgb(0, 0, 0) !important;
@@ -159,7 +163,7 @@
     }
     100%
     {
-        width: 75%;
+        width: 80%;
     }
 }
 @keyframes load5 {
@@ -169,7 +173,7 @@
     }
     100%
     {
-        width: 55%;
+        width: 80%;
     }
 }
 @keyframes load6 {
@@ -179,6 +183,11 @@
     }
     100%
     {
-        width: 60%;
+        width: 70%;
     }
+}
+
+.certifications h2{
+    text-transform: uppercase;
+    font-weight: bold;
 }
