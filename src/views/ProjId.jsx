@@ -7,7 +7,7 @@ import Carousel from '../component/Carousel'
 export default function ProjId() {
 
   const { id } = useParams()
-  //const router = useN
+
   const [project, setProject] = useState(null)
   const [loading, setLoading] = useState(true)
 
