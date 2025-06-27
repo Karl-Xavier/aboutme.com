@@ -23,7 +23,7 @@ export const projects = [
         </ol><br/>Users can search for anime, stream episodes directly in browser with a custom video player, bookmark favorite anime and leave comments. The platform supports mobile device.<br/>This setup separates concerns, ensures better scalability, and give a fast experience to anime fans around the world.<p>`,
         cover: shonenstream,
         tag: [nextLogo, typeLogo, nodeLogo, expressLogo,redisLogo, mongoLogo],
-        link: [
+        links: [
             { name: 'Github', link: 'https://github.com/Karl-Xavier/Shonenstream-Remake.git', icon: <GithubLogo size={22} weight='fill'/> },
             { name: 'Live Link', link: 'https://myanimetv.vercel.app', icon: <Link size={22} weight='bold'/>, }
         ],

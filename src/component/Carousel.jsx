@@ -14,8 +14,8 @@ export default function Carousel({ data }) {
   return (
     <div className='carousel-container relative w-full max-w-[800px] mx-auto'>
       <img src={data[index]} alt={`Slide ${index}`} className='w-full h-[200px] md:h-[400px]'/>
-      <button className='absolute left-0' onClick={prev}><CaretCircleLeft size={38} weight='fill'/></button>
-      <button className='absolute right-0' onClick={next}><CaretCircleRight size={38} weight='fill'/></button>
+      <button className='absolute left-0 cursor-pointer' onClick={prev}><CaretCircleLeft size={38} weight='fill'/></button>
+      <button className='absolute right-0 cursor-pointer' onClick={next}><CaretCircleRight size={38} weight='fill'/></button>
     </div>
   )
 }

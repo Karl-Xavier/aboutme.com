@@ -37,9 +37,9 @@ export default function ProjId() {
 
   return (
     <div className='project-description w-full h-auto px-[7%] py-[20px]'>
-      <div className="links">
-        {project.link.map((links, index) => (
-          <p key={index} className='flex flex-row justify-start items-center gap-[4px]'><span>{links.icon}</span> <span className='font-bold'>{links.name}:-</span> <a href={links.link} target='_blank'>{links.link}</a></p>
+      <div className="links flex flex-row justify-start items-center gap-[4px]">
+        {project.links.map((link, index) => (
+          <p key={index} className='flex flex-row justify-start items-center gap-[4px]'><span>{link.icon}</span><a href={link.link} target='_blank'>{link.name}</a></p>
         ))}
       </div>
       <img src={project.cover} alt={project.title} className='md:h-[500px] w-full mb-[20px]'/>
