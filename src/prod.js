@@ -25,7 +25,6 @@ export const projects = [
         tag: [nextLogo, typeLogo, nodeLogo, expressLogo,redisLogo, mongoLogo],
         links: [
             { name: 'Github', link: 'https://github.com/Karl-Xavier/Shonenstream-Remake.git', icon: <GithubLogo size={22} weight='fill'/> },
-            { name: 'Live Link', link: 'https://myanimetv.vercel.app', icon: <Link size={22} weight='bold'/>, }
         ],
         otherImages: [shonenstream2, shonenstream3, shonenstream4, shonenstream5]
     },
