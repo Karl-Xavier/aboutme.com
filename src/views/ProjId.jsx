@@ -11,8 +11,6 @@ export default function ProjId() {
   const [project, setProject] = useState(null)
   const [loading, setLoading] = useState(true)
 
-  console.log(projects)
-
   useEffect(() => {
 
     const projectData = projects.find(proj => proj.id === Number(id))
@@ -29,7 +27,7 @@ export default function ProjId() {
       console.log(projectData, id)
     }
 
-  },[projects])
+  },[id])
 
   if(loading){
     <p>Loading....</p>
@@ -37,14 +35,18 @@ export default function ProjId() {
 
   return (
     <div className='project-description w-full h-auto px-[7%] py-[20px]'>
-      <div className="links flex flex-row justify-start items-center gap-[4px]">
-        {project.links.map((link, index) => (
-          <p key={index} className='flex flex-row justify-start items-center gap-[4px]'><span>{link.icon}</span><a href={link.link} target='_blank'>{link.name}</a></p>
-        ))}
-      </div>
-      <img src={project.cover} alt={project.title} className='md:h-[500px] w-full mb-[20px]'/>
-      <div className="description" dangerouslySetInnerHTML={{ __html: project.description }}></div>
-      <Carousel data={project.otherImages}/>
+     {project && (
+      <>
+        <div className="links flex flex-row justify-start items-center gap-[4px]">
+          {project.links.map((link, index) => (
+            <p key={index} className='flex flex-row justify-start items-center gap-[4px]'><span>{link.icon}</span><a href={link.link} target='_blank'>{link.name}</a></p>
+          ))}
+        </div>
+        <img src={project.cover} alt={project.title} className='md:h-[500px] w-full mb-[20px]'/>
+        <div className="description" dangerouslySetInnerHTML={{ __html: project.description }}></div>
+        <Carousel data={project.otherImages}/>
+        </>
+      )}
     </div>
   )
 }
