@@ -55,32 +55,31 @@ export default function ContactContent() {
 
     return (
         <div className='container' onClick={changeIsOpen}>
-            <h2>Contact Me on</h2>
+            <h2 className='text-[18px]'>Contact Me on</h2>
             <div className="container contactInfo mt-4 p-3">
-                <div className="row logo">
-                    <div className="col-lg-3 log phone">
+                <div className="logo grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div className="log phone">
                         <a  style={!lightMode ? styles.darkCol : styles.LightCol}className='aref' href="tel:+2347065824973" target='_blank'><PhoneCall size={60} weight='fill' color={lightMode ? '161414' : '#eee'}/>
                         <p>+2347065824973</p>
                         </a>
                     </div>
-                    <div className="col-lg-3 log email">
-                    <a style={!lightMode ? styles.darkCol : styles.LightCol} className='aref' href="mailto:brunoemeka06@gmail.com" target='_blank'><Envelope size={60} weight='fill' color={lightMode ? '161414' : '#eee'}/>
-                        <p>brunoemeka06@gmail.com</p>
+                    <div className="log email">
+                    <a style={!lightMode ? styles.darkCol : styles.LightCol} className='aref' href="mailto:uwasbruno256@gmail.com" target='_blank'><Envelope size={60} weight='fill' color={lightMode ? '161414' : '#eee'}/>
+                        <p>uwasbruno256@gmail.com</p>
                     </a>
                     </div>
-                    <div className="col-lg-3 log whats">
+                    <div className="log whats">
                         <a style={!lightMode ? styles.darkCol : styles.LightCol} className='aref' href="https://wa.me/07065824973" target='_blank'><WhatsappLogo size={60} weight='fill' color='#068d3a'/>
                         <p>+2347065824973</p>
                         </a>
                     </div>
-                    <div className="col-lg-3 log face">
+                    <div className="log face">
                     <a style={!lightMode ? styles.darkCol : styles.LightCol} className='aref' href="https://www.facebook.com/KarlXaviver" target='_blank'><FacebookLogo size={60} weight='fill' color='#0066ff'/>
                         <p>Emmy Bruno</p>
                     </a>
                     </div>
                 </div>
                 <div className="message">
-                    <h2>Send me a message</h2>
                     <form ref={form} onSubmit={handleSubmit}>
                         <input 
                             type="text" 
@@ -105,7 +104,7 @@ export default function ContactContent() {
                             onChange={handleChange}
                             required
                         ></textarea>
-                        <button className='butt' type='submit'>
+                        <button className='butt w-[120px]' type='submit'>
                             Send<PaperPlaneTilt size={25} weight='fill'/>
                         </button>
                     </form>

@@ -4,9 +4,6 @@
 
 .logo{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .logo>.log{
@@ -23,6 +20,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.logo .log .aref p{
+    font-weight: 600;
 }
 
 .message{
@@ -48,7 +49,7 @@
     border: none;
     outline: none;
     background-color: #eee;
-    border-radius: 10px;
+    border-radius: 5px;
     color: #000;
 }
 
@@ -64,7 +65,7 @@
     border: none;
     outline: none;
     background-color: #eee;
-    border-radius: 10px;
+    border-radius: 5px;
     color: #000;
 }
 
@@ -74,12 +75,11 @@
 }
 
 .butt{
-    width: 30%;
     background-color: #eee;
     color: #000;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 10px;
     border-radius: 10px;
