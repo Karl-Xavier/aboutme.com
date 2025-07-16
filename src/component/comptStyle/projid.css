@@ -1,8 +1,10 @@
 .description p span{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 4px;
+  display: inline;
+
+  img{
+    display: inline;
+    margin-right: 4px;
+  }
 }
 
 .description ol{
@@ -11,10 +13,10 @@
 }
 
 .description ol span{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 4px;
+  display: inline;
+  img{
+    display: inline;
+  }
 }
 
 /* Carousel Styles */

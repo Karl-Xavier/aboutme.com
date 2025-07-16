@@ -12,7 +12,7 @@ export default function Projectscon() {
   return (
     <div className='project-container container'>
       <h2 className="text-[18px] font-bold">MY PROJECTS</h2>
-      <ul className="projects grid grid-cols-1 md:grid-cols-4 gap-2 w-full">
+      <ul className="projects grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 w-full">
         {projects.map((project, index) => (
           <li key={index} id={project.id} className='mb-[75px]'>
             <img src={project.cover} alt={project.title} className='cover'/>
